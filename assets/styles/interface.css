@@ -1,0 +1,36 @@
+:root {
+	--primary-color: #5b8bf7; /* Основной цвет бренда */
+	--secondary-color: #ff8c42; /* Дополнительный цвет бренда */
+	--accent-color: #ffd700; /* Акцентный цвет для важных элементов, например кнопок */
+	--text-color: #333333; /* Основной цвет текста */
+	--bg-color: #ffffff; /* Фоновый цвет для содержимого */
+	--header-bg-color: #f8f9fa; /* Фоновый цвет для шапки */
+	--footer-bg-color: #24282f; /* Фоновый цвет для подвала */
+	--border-color: #e1e1e1; /* Цвет границ элементов */
+	--error-color: #d9534f; /* Цвет для сообщений об ошибках */
+	--success-color: #5cb85c; /* Цвет для сообщений об успешных операциях */
+	--warning-color: #f0ad4e; /* Цвет для предупреждающих сообщений */
+	--info-color: #5bc0de; /* Цвет для информационных сообщений */
+}
+
+body {
+	background: var(--bg-color);
+	color: var(--text-color);
+
+	font-family: 'Inter', sans-serif;
+}
+
+header {
+	background: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+}

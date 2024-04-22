@@ -1,0 +1,73 @@
+#tours-and-excursions {
+	background-color: #f5f5f5; /* фоновый цвет всего раздела */
+	padding: 40px 0; /* отступы сверху и снизу */
+}
+#tours-and-excursions h2 {
+	color: #333; /* цвет заголовка */
+	text-align: center; /* выравнивание заголовка по центру */
+	margin-bottom: 20px; /* отступ под заголовком */
+}
+
+#tours-and-excursions p {
+	color: #666; /* цвет текста описания */
+	text-align: center; /* выравнивание описания по центру */
+	margin-bottom: 40px; /* отступ под описанием */
+}
+
+.tour-cards {
+	display: flex; /* использование flexbox для расположения карточек */
+	justify-content: space-between; /* равномерное распределение карточек */
+	flex-wrap: wrap; /* перенос карточек на новую строку если не хватает места */
+	text-align: center;
+}
+
+.tour-card {
+	flex-basis: calc(
+		33.3333% - 20px
+	); /* ширина карточки минус отступ для space-between */
+	margin-bottom: 20px; /* отступ между рядами карточек */
+	background-color: #ffffff; /* фоновый цвет карточки */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* тень под карточкой */
+	transition: transform 0.3s ease-in-out; /* анимация при наведении */
+}
+
+.tour-card:hover {
+	transform: translateY(-5px); /* Поднятие карточки при наведении */
+}
+
+.tour-card img {
+	width: 100%; /* ширина изображения на всю ширину карточки */
+	height: auto; /* автоматическая высота изображения */
+}
+
+.tour-card h3 {
+	color: #333; /* цвет заголовка карточки */
+	padding: 15px 20px 0; /* отступы сверху и по бокам для заголовка */
+}
+
+.tour-card p {
+	color: #666; /* цвет текста карточки */
+	padding: 10px 20px 20px; /* отступы для текста в карточке */
+}
+
+.tour-card button {
+	display: block;
+	width: calc(
+		100% - 40px
+	); /* ширина кнопки соответствует ширине текста в карточке */
+	padding: 10px 0;
+	margin: 20px; /* внешний отступ кнопки */
+	background-color: #ff8c42; /* фоновый цвет кнопки */
+	color: white;
+	border: none;
+	border-radius: 16px;
+	outline: none;
+	cursor: pointer;
+	text-align: center; /* выравнивание текста кнопки */
+	text-transform: uppercase; /* текст в верхнем регистре */
+	transition: background-color 0.3s ease; /* плавность изменения цвета кнопки */
+}
+
+.tour-card button:hover {
+	background-color: #e77a31; /* изменение цвета кнопки при наведении */
+}
