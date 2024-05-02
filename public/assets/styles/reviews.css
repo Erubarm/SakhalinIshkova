@@ -1,0 +1,127 @@
+.reviews-section {
+	background-color: #f8f8f8;
+	padding: 50px 0;
+}
+
+.reviews-section .container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+}
+
+.reviews-section h2 {
+	text-align: center;
+	color: #333333;
+	margin-bottom: 30px;
+}
+
+.review {
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	border-left: 4px solid #5cb85c; /* Цветная полоса слева */
+}
+
+.review blockquote {
+	font-style: italic;
+	color: #666666;
+	margin: 0;
+	position: relative;
+}
+
+.review blockquote::before {
+	content: '“'; /* Открывающая кавычка */
+	font-size: 50px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	color: #5cb85c; /* Цвет кавычки */
+}
+
+.review blockquote::after {
+	content: '”'; /* Закрывающая кавычка */
+	font-size: 50px;
+	position: absolute;
+	right: -20px;
+	bottom: -20px;
+	color: #5cb85c; /* Цвет кавычки */
+}
+
+.review footer {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.review footer img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.reviewer-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.reviewer-info strong {
+	font-size: 16px;
+	color: #333333;
+}
+
+.reviewer-info span {
+	font-size: 14px;
+	color: #777777;
+}
+
+/* Отзывчивость для мобильных устройств */
+@media (max-width: 768px) {
+	.reviews-section .container {
+		padding: 20px;
+	}
+
+	.review blockquote::before,
+	.review blockquote::after {
+		display: none; /* Скрыть кавычки на мобильных устройствах */
+	}
+}
+
+/* Анимация появления отзывов */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.review {
+	animation: fadeInUp 0.8s ease-out forwards;
+	opacity: 0; /* Начальное состояние невидимости для анимации */
+}
+
+/* Задержка анимации для каждого отзыва */
+.review:nth-child(1) {
+	animation-delay: 0.3s;
+}
+
+.review:nth-child(2) {
+	animation-delay: 0.6s;
+}
+
+.review:nth-child(3) {
+	animation-delay: 0.9s;
+}
+
+.review:nth-child(4) {
+	animation-delay: 1.2s;
+}
