@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			reviews.forEach(review => {
 				const reviewBlock = document.createElement('div')
-				reviewBlock.className = 'review'
+				reviewBlock.className = 'review hidden'
 				reviewBlock.innerHTML = `
 									<blockquote>${review.review}</blockquote>
 									<footer>

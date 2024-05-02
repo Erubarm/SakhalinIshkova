@@ -7,7 +7,7 @@ const app = express()
 const PORT = 3000
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static('public')) // Предполагается, что ваши файлы лендинга находятся в папке public
+app.use(express.static('public'))
 
 // Маршрут для получения отзывов
 app.get('/reviews', (req, res) => {

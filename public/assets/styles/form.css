@@ -83,3 +83,22 @@
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transform: translateY(-2px);
 }
+
+/* Скрытие элементов до того, как они появятся в области видимости */
+.hidden {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+/* Анимация появления */
+.fadeInUp {
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Определение анимации */
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
