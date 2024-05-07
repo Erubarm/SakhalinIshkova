@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			reviews.forEach(review => {
 				const reviewBlock = document.createElement('div')
 				reviewBlock.className = 'review hidden'
+				const reviewDate = new Date(review.date).toLocaleDateString('ru-RU') // Форматирование даты
 				reviewBlock.innerHTML = `
 									<blockquote>${review.review}</blockquote>
 									<footer>
 											<div class="reviewer-info">
 													<strong>${review.name}</strong>
+													<span>${reviewDate}</span> <!-- Отображение даты -->
 											</div>
 									</footer>
 							`

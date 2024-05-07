@@ -20,14 +20,18 @@ app.get('/reviews', (req, res) => {
 })
 
 // Маршрут для отправки отзыва
+// Маршрут для отправки отзыва
 app.post('/submit-review', (req, res) => {
-	const newReview = req.body
+	const newReview = {
+		...req.body,
+		date: new Date().toISOString(), // Добавление текущей даты в формате ISO
+	}
 	fs.readFile(path.join(__dirname, 'reviews.json'), 'utf8', (err, data) => {
 		if (err) {
 			return res.status(500).send('Ошибка при чтении файла с отзывами')
 		}
 		const reviews = JSON.parse(data)
-		reviews.push(newReview)
+		reviews.unshift(newReview) // Добавление нового отзыва в начало массива
 		fs.writeFile(
 			path.join(__dirname, 'reviews.json'),
 			JSON.stringify(reviews, null, 2),
